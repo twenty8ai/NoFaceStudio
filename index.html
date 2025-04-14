@@ -14,8 +14,8 @@
 
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #fff; /* White background */
-      color: #000; /* Default text black */
+      background-color: #000; /* Solid Black Background */
+      color: white;
       overflow: hidden;
       display: flex;
       justify-content: center;
@@ -38,30 +38,49 @@
       letter-spacing: 5px;
       text-transform: uppercase;
       margin-bottom: 20px;
-      animation: colorShift 1s infinite alternate;
+      background: linear-gradient(90deg, #FF0000, #FFFFFF, #FF0000);
+      background-size: 200% auto;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      animation: gradientFade 3s ease-in-out infinite;
     }
 
-    @keyframes colorShift {
-      0% { color: #000; }  /* Black */
-      100% { color: #FF0000; }  /* Red */
+    @keyframes gradientFade {
+      0% {
+        background-position: 0% center;
+      }
+      50% {
+        background-position: 100% center;
+      }
+      100% {
+        background-position: 0% center;
+      }
     }
 
     .subtitle {
       font-size: 1.5em;
       font-weight: 300;
-      color: #333;
+      color: #ccc;
       margin-bottom: 40px;
       opacity: 0.9;
+      animation: fadeIn 1.5s ease-in-out 0.5s;
     }
 
     .countdown {
       font-size: 2.5em;
       font-weight: 600;
-      background: rgba(255, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.1);
       padding: 20px 30px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
       color: #FF0000;
+      animation: fadeIn 1.5s ease-in-out 1s;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .footer {
@@ -132,7 +151,7 @@
 </div>
 
 <script>
-  // Countdown to 30 days from today
+  // Set countdown to 30 days from today
   const now = new Date();
   const countdownDate = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
 
@@ -156,3 +175,4 @@
 
 </body>
 </html>
+✅ What You Can Do N
