@@ -1,159 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Coming Soon - No Face Studio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Coming Soon - No Face Studio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #000; /* Black Background */
-            color: white;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            padding: 0 20px;
-        }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fff; /* White background */
+      color: #000; /* Default text black */
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 0 20px;
+    }
 
-        .container {
-            max-width: 900px;
-            width: 100%;
-            padding: 20px;
-            z-index: 10;
-        }
+    .container {
+      max-width: 900px;
+      width: 100%;
+      padding: 20px;
+      z-index: 10;
+    }
 
-        .brand-name {
-            font-size: 6em;
-            font-weight: 800;
-            color: #FF0000; /* Bright Red */
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            text-shadow: 0 0 20px rgba(255, 0, 0, 0.6); /* Red Glow */
-            animation: fadeIn 1.5s ease-in-out;
-        }
+    .brand-name {
+      font-size: 6em;
+      font-weight: 800;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      animation: colorShift 1s infinite alternate;
+    }
 
-        .subtitle {
-            font-size: 1.5em;
-            font-weight: 300;
-            color: #fff;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            animation: fadeIn 1.5s ease-in-out 0.5s;
-        }
+    @keyframes colorShift {
+      0% { color: #000; }  /* Black */
+      100% { color: #FF0000; }  /* Red */
+    }
 
-        .countdown {
-            font-size: 2.5em;
-            font-weight: 600;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-            color: #FF0000; /* Red countdown text */
-            animation: fadeIn 1.5s ease-in-out 1s;
-        }
+    .subtitle {
+      font-size: 1.5em;
+      font-weight: 300;
+      color: #333;
+      margin-bottom: 40px;
+      opacity: 0.9;
+    }
 
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(30px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
+    .countdown {
+      font-size: 2.5em;
+      font-weight: 600;
+      background: rgba(255, 0, 0, 0.1);
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+      color: #FF0000;
+    }
 
-        .footer {
-            position: absolute;
-            bottom: 20px;
-            font-size: 1.2em;
-            color: #999;
-            letter-spacing: 1px;
-            opacity: 0.6;
-            font-weight: 300;
-        }
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 1.2em;
+      color: #777;
+      letter-spacing: 1px;
+      opacity: 0.6;
+      font-weight: 300;
+    }
 
-        @media (max-width: 768px) {
-            .brand-name {
-                font-size: 5em;
-                letter-spacing: 3px;
-            }
+    @media (max-width: 768px) {
+      .brand-name {
+        font-size: 5em;
+        letter-spacing: 3px;
+      }
 
-            .subtitle {
-                font-size: 1.3em;
-                margin-bottom: 20px;
-            }
+      .subtitle {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+      }
 
-            .countdown {
-                font-size: 2em;
-                padding: 15px 20px;
-            }
+      .countdown {
+        font-size: 2em;
+        padding: 15px 20px;
+      }
 
-            .footer {
-                font-size: 1em;
-            }
-        }
+      .footer {
+        font-size: 1em;
+      }
+    }
 
-        @media (max-width: 480px) {
-            .brand-name {
-                font-size: 4em;
-                letter-spacing: 2px;
-            }
+    @media (max-width: 480px) {
+      .brand-name {
+        font-size: 4em;
+        letter-spacing: 2px;
+      }
 
-            .subtitle {
-                font-size: 1.1em;
-                margin-bottom: 15px;
-            }
+      .subtitle {
+        font-size: 1.1em;
+        margin-bottom: 15px;
+      }
 
-            .countdown {
-                font-size: 1.7em;
-                padding: 10px 18px;
-            }
+      .countdown {
+        font-size: 1.7em;
+        padding: 10px 18px;
+      }
 
-            .footer {
-                font-size: 0.9em;
-            }
-        }
-    </style>
+      .footer {
+        font-size: 0.9em;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="brand-name">No Face Studio</div>
-    <div class="subtitle">We’re building something bold and beautiful. Stay tuned!</div>
-    <div class="countdown" id="countdown">
-        Launching in: <span id="countdown-timer"></span>
-    </div>
+  <div class="brand-name">No Face Studio</div>
+  <div class="subtitle">We’re building something bold and beautiful. Stay tuned!</div>
+  <div class="countdown" id="countdown">
+    Launching in: <span id="countdown-timer"></span>
+  </div>
 </div>
 
 <div class="footer">
-    <p>&copy; 2025 No Face Studio | All Rights Reserved</p>
+  <p>&copy; 2025 No Face Studio | All Rights Reserved</p>
 </div>
 
 <script>
-    const countdownDate = new Date("May 1, 2025 00:00:00").getTime();
+  // Countdown to 30 days from today
+  const now = new Date();
+  const countdownDate = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
 
-    const countdownTimer = setInterval(function() {
-        const now = new Date().getTime();
-        const distance = countdownDate - now;
+  const countdownTimer = setInterval(function() {
+    const currentTime = new Date().getTime();
+    const distance = countdownDate - currentTime;
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById("countdown-timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    document.getElementById("countdown-timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-        if (distance < 0) {
-            clearInterval(countdownTimer);
-            document.getElementById("countdown-timer").innerHTML = "Launched!";
-        }
-    }, 1000);
+    if (distance < 0) {
+      clearInterval(countdownTimer);
+      document.getElementById("countdown-timer").innerHTML = "Launched!";
+    }
+  }, 1000);
 </script>
 
 </body>
