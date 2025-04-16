@@ -19,26 +19,29 @@
       font-family: 'Arial', sans-serif;
       background-color: #000;
       color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       text-align: center;
-      padding: 0 20px;
+      padding: 10px;
     }
     .container {
-      max-width: 900px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 40px 20px 120px; /* Bottom padding added to prevent footer overlap */
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .logo-wrapper {
       position: relative;
-      width: 300px;
-      max-width: 80vw;
-      margin: 0 auto 30px;
+      width: 180px;
+      max-width: 60vw;
+      margin-bottom: 20px;
     }
     .logo-wrapper img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 8px;
     }
     .logo-wrapper::after {
       content: '';
@@ -62,11 +65,11 @@
       100% { left: 125%; }
     }
     .brand-name {
-      font-size: 6em;
+      font-size: 2.8em;
       font-weight: 800;
-      letter-spacing: 5px;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       background: linear-gradient(90deg, #FF0000, #FFFFFF, #FF0000);
       background-size: 200% auto;
       color: transparent;
@@ -80,52 +83,36 @@
       100% { background-position: 0% center; }
     }
     .subtitle {
-      font-size: 1.5em;
+      font-size: 1em;
       font-weight: 300;
       color: #ccc;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       opacity: 0.9;
       animation: fadeIn 1.5s ease-in-out 0.5s;
+      padding: 0 10px;
     }
     .countdown {
-      font-size: 2.5em;
+      font-size: 1.4em;
       font-weight: 600;
       background: rgba(255, 255, 255, 0.1);
-      padding: 20px 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
       color: #FF0000;
       animation: fadeIn 1.5s ease-in-out 1s;
+      margin-bottom: 20px;
     }
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(30px); }
       100% { opacity: 1; transform: translateY(0); }
     }
     .footer {
-      font-size: 1.2em;
+      font-size: 0.9em;
       color: #777;
       letter-spacing: 1px;
       opacity: 0.6;
       font-weight: 300;
-      padding: 20px;
-      text-align: center;
-    }
-    @media (max-width: 768px) {
-      .brand-name {
-        font-size: 4em;
-        letter-spacing: 2px;
-      }
-      .subtitle {
-        font-size: 1.2em;
-        margin-bottom: 20px;
-      }
-      .countdown {
-        font-size: 1.8em;
-        padding: 15px 20px;
-      }
-      .footer {
-        font-size: 1em;
-      }
+      padding: 10px 0;
     }
   </style>
 </head>
